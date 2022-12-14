@@ -654,7 +654,9 @@ address {
     width: 448px;
 }
 .form-field label {
+    display: block;
     margin-bottom: 4px;
+
     color: var(--text-color);
     font-weight: 400;
     font-size: 12px;
@@ -673,9 +675,17 @@ address {
     padding-left: 40px;
 }
 .form-field textarea {
+    display: block;
     resize: none;
     margin-bottom: 20px;
     }
+textarea[placeholder] {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16px;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+}
 .input-icon {
     position: absolute;
     left: 12px;
