@@ -640,9 +640,7 @@ address {
     height: 18px;
 }
 /* FORM */
-.request {
-   
-}
+
 .request p {
     margin-bottom: 12px;
     font-weight: 700;
@@ -669,7 +667,6 @@ address {
     border: rgba(33, 33, 33, 0.2) solid 1px;
     border-radius: 4px;
     cursor: pointer;
-    outline: none;
 }
 .form-field input {
     margin-bottom: 10px;
@@ -688,27 +685,49 @@ address {
     width: 18px;
     height: 18px;
 }
-.form-field input:focus~.input-icon {
-    fill: var(--accent-color);
+ /* .form-field input:focus~.input-icon {
+    fill: var(--accent-color);} */
+
+.form-field:focus-within .input-icon {
+   fill: var(--accent-color);
+   outline: var(--accent-color);
 }
-.form-field:focus-within {
-   border-color: var(--accent-color);
+/* CHECKBOX */
+.checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
-.check-box {
+.checkbox:checked + .icon-checkbox{
+    background-color: var(--accent-color);
+    border-radius: 2px;
+    border: var(--accent-color);
+    
+}
+.icon-checkbox {
+    width: 16px;
+    height: 15px;
+    border: #212121 solid 2px;
+    border-radius: 2px;
+    margin-right: 8px;
+}
+.label {
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-bottom: 30px;
-}
-.check-box label {
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
     letter-spacing: 0.03em;
-    margin-left: 8px;
+    margin-bottom: 30px;
+    margin-left: 20px;
 }
-.check-box a {
+.label a {
     color: var(--accent-color);
+    margin-left: 5px;
+
+    /* СПРОБУВАЛА, НЕ ПРАЦЮЄ
+    text-decoration-skip: none; 
+    -webkit-text-decoration-skip: none;  */
 }
 .modal-batton {
     font-family: inherit;
