@@ -566,7 +566,11 @@ address {
     cursor: pointer;
     width: 191px;
     padding: 10px 62px 10px 28px;
-   
+
+   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.subscribe-button:hover, .subscribe-button:focus {
+    background-color: rgba(24, 140, 232, 1);
 }
 .icon-airplane {
     position: absolute;
@@ -629,7 +633,6 @@ address {
     fill: #212121;
     cursor: pointer;
     
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .botton-close:hover .x-close,
 .botton-close:focus .x-close {
@@ -638,6 +641,8 @@ address {
 .x-close {
     width: 18px;
     height: 18px;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* FORM */
 
@@ -665,10 +670,12 @@ address {
 }
 .form-field input, .form-field textarea {
     width: 100%;
-    padding: 11px;
     border: rgba(33, 33, 33, 0.2) solid 1px;
     border-radius: 4px;
     cursor: pointer;
+    padding: 11px;
+
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-field input {
     margin-bottom: 10px;
@@ -676,8 +683,10 @@ address {
 }
 .form-field textarea {
     display: block;
+    height: 120px;
     resize: none;
     margin-bottom: 20px;
+    padding: 15px;
     }
 textarea[placeholder] {
     font-weight: 400;
@@ -694,14 +703,18 @@ textarea[placeholder] {
     display: inline-block;
     width: 18px;
     height: 18px;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
- /* .form-field input:focus~.input-icon {
-    fill: var(--accent-color);} */
 
 .form-field:focus-within .input-icon {
    fill: var(--accent-color);
-   border-color: var(--accent-color);
 }
+.form-field input:focus, .form-field textarea:focus {
+    border: solid 1px var(--accent-color);
+    outline: none;
+}
+
 /* CHECKBOX */
 .checkbox {
     -webkit-appearance: none;
@@ -711,8 +724,8 @@ textarea[placeholder] {
 .checkbox:checked + .icon-checkbox{
     background-color: var(--accent-color);
     border-radius: 2px;
-    border: var(--accent-color);
-    
+    border-color: var(--accent-color);
+    background-origin: border-box;
 }
 .icon-checkbox {
     width: 16px;
@@ -720,6 +733,8 @@ textarea[placeholder] {
     border: #212121 solid 2px;
     border-radius: 2px;
     margin-right: 8px;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
 }
 .label {
     display: flex;
@@ -734,10 +749,7 @@ textarea[placeholder] {
 .label a {
     color: var(--accent-color);
     margin-left: 5px;
-
-    /* СПРОБУВАЛА, НЕ ПРАЦЮЄ
-    text-decoration-skip: none; 
-    -webkit-text-decoration-skip: none;  */
+    text-decoration-skip-ink:none ;
 }
 .modal-batton {
     font-family: inherit;
